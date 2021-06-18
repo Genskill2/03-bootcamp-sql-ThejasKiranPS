@@ -1,0 +1,12 @@
+publisher
+     | id          | name | country |
+     | primary key | text | text    |
+books
+     | id          | title | publisher                   |
+     | primary key | text  | foreign key to publisher.id |
+subjects
+     | id          | name |
+     | primary key | text |
+books_subjects
+    | book                    | subject                    |
+    | foreign key to books.id | foreign key to subjects.id |

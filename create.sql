@@ -1,11 +1,11 @@
 CREATE TABLE publisher (
-    id PRIMARY KEY NOT NULL,
+    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     name TEXT,
     country TEXT
     );
 
 CREATE TABLE books (
-    id PRIMARY KEY NOT NULL,
+    id INTEGER PRIMARY KEY NOT NULL,
     title TEXT,
     publisher INTEGER,
     FOREIGN KEY (publisher)
@@ -13,7 +13,7 @@ CREATE TABLE books (
     );
 
 CREATE TABLE subjects (
-    id PRIMARY KEY NOT NULL,
+    id INTEGER  PRIMARY KEY NOT NULL,
     name TEXT
     );
 
