@@ -1,1 +1,1 @@
-select b.title from books as b inner join books_subjects as bs on bs.book = b.id inner join subjects as s on bs.subject = s.id where s.name = "Technology";
+select s.name from subjects as s where s.id in (select bs.subject from books_subjects as bs where bs.book=(select b.id from books as b where name= "Atomic Habits"));
